@@ -12,6 +12,10 @@
     # this route set up allows us to change the URL name "about-us" without having to change it in multiple spots since it's all routed to :about. If you dont specify the as: :about, it'll change the prefix name to the URL name and therefore the "pathname_path" will need to be changed in the nav bar html.
     get "about-us", to: "about#index", as: :about 
 
+    get "sign_up", to: "registrations#new"
+
+    #creating a post request route
+    post "sign_up", to: "registrations#create" 
     root to:"main#index"
 
 
